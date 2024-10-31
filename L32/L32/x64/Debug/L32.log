@@ -1,0 +1,3 @@
+﻿  L32.cpp
+C:\Users\ecidm\Desktop\P\L32\L32.cpp(29,1): warning C4715: sim: значение возвращается не при всех путях выполнения
+  L32.vcxproj -> C:\Users\ecidm\Desktop\P\L32\x64\Debug\L32.exe
