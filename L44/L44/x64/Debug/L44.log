@@ -1,0 +1,11 @@
+﻿  L44.cpp
+C:\Users\ecidm\Desktop\P\L44\L44.cpp(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\ecidm\Desktop\P\L44\L44.cpp(4,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\ecidm\Desktop\P\L44\Characteristic.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  (компиляция исходного файла "L44.cpp")
+  
+C:\Users\ecidm\Desktop\P\L44\Characteristic.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  (компиляция исходного файла "L44.cpp")
+  
+C:\Users\ecidm\Desktop\P\L44\L44.cpp(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  L44.vcxproj -> C:\Users\ecidm\Desktop\P\L44\x64\Debug\L44.exe
