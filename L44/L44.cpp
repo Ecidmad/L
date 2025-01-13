@@ -26,10 +26,10 @@ int main()
     cout << MyMath::Sub(6, 4) << "\n";
     cout << MyMath::K << "\n"; 
     */
-    //Weapon::type(Direction::ONEHANDED);
-    //Weapon::type(Direction::TWOHANDED);
-    //Weapon::type(Direction::BOW);
-    //Weapon::type(Direction::CROSSBOW);
-    //Weapon Spear("Spear", 10, 2, Direction::TWOHANDED);
+    Weapon::type(Direction::ONEHANDED);
+    Weapon::type(Direction::TWOHANDED);
+    Weapon::type(Direction::BOW);
+    Weapon::type(Direction::CROSSBOW);
+    Weapon Spear("Spear", 10, 2, Direction::TWOHANDED);
     cout << "Hi";
 }
