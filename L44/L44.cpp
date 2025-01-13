@@ -31,5 +31,4 @@ int main()
     Weapon::type(Direction::BOW);
     Weapon::type(Direction::CROSSBOW);
     Weapon Spear("Spear", 10, 2, Direction::TWOHANDED);
-    cout << "Hi";
 }
