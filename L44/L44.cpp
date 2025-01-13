@@ -32,5 +32,4 @@ int main()
     Weapon::printGroup(Direction::CROSSBOW);
     Weapon spear("Spear", 10, 2, Direction::TWOHANDED);
     Weapon::printGroup(spear.getGroup());
-    cout << "Hi\n";
 }
