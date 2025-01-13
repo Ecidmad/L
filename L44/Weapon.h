@@ -14,9 +14,9 @@ private:
     string name;
     float damage;
     int weight;
-    Direction type2;
+    Direction group;
 public:
-    static void type(Direction);
+    static void printGroup(Direction);
     Weapon(string, float, int, Direction);
     Weapon();
     ~Weapon();
@@ -26,7 +26,7 @@ public:
     string getName();
     float getDamage();
     int getWeight();
-    Direction getType();
+    Direction getGroup();
     void setDamage(float damage);
 
 };

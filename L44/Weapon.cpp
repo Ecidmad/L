@@ -1,13 +1,13 @@
 #include "Weapon.h"
 #include <iostream>
 using namespace std;
-Weapon::Weapon(string name, float damage, int weight, Direction type2) : name(name), damage(damage), weight(weight), type2(type2) {}
+Weapon::Weapon(string name, float damage, int weight, Direction group) : name(name), damage(damage), weight(weight), group(group){}
 Weapon::Weapon() :Weapon("Weapon", 1, 1, Direction::ONEHANDED) {}
 Weapon::~Weapon()
 {
     std::cout << name << " " << damage << " " << weight << " уничтожается \n";
 }
-void Weapon::type(Direction d)
+void Weapon::printGroup(Direction d)
 {
     if (d == Direction::ONEHANDED) std::cout << "Одноручное";
     else if (d == Direction::TWOHANDED) std::cout << "Двуручное";
@@ -52,9 +52,9 @@ int Weapon::getWeight()
 {
     return weight;
 }
-Direction Weapon::getType()
+Direction Weapon::getGroup()
 {
-    return Direction(type2);
+    return group;
 }
 void Weapon::setDamage(float damage)
 {

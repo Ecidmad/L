@@ -26,9 +26,11 @@ int main()
     cout << MyMath::Sub(6, 4) << "\n";
     cout << MyMath::K << "\n"; 
     */
-    Weapon::type(Direction::ONEHANDED);
-    Weapon::type(Direction::TWOHANDED);
-    Weapon::type(Direction::BOW);
-    Weapon::type(Direction::CROSSBOW);
-    Weapon Spear("Spear", 10, 2, Direction::TWOHANDED);
+    Weapon::printGroup(Direction::ONEHANDED);
+    Weapon::printGroup(Direction::TWOHANDED);
+    Weapon::printGroup(Direction::BOW);
+    Weapon::printGroup(Direction::CROSSBOW);
+    Weapon spear("Spear", 10, 2, Direction::TWOHANDED);
+    Weapon::printGroup(spear.getGroup());
+    cout << "Hi\n";
 }
