@@ -29,4 +29,6 @@ int main()
     MagicWeapon scepter();
     MagicWeapon band("Band", 7, 1, ONEHANDED, 2);
     band.getBonusDamage();
+    cout << band.getDamage() << "\n";
+    cout << spear.getDamage() << "\n";
 }

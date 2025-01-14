@@ -12,3 +12,7 @@ float MagicWeapon::getBonusDamage()
 {
 	return bonusDamage;
 }
+float MagicWeapon::getDamage()
+{
+	return Weapon::getDamage()+bonusDamage;
+}

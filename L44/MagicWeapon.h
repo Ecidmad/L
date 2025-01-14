@@ -10,4 +10,5 @@ public:
     MagicWeapon();
     ~MagicWeapon();
     float getBonusDamage();
+    float getDamage() override;
 };
