@@ -4,6 +4,7 @@ using namespace std;
 #include "Characteristic.h";
 #include "MyMath.h";
 #include "MagicWeapon.h"
+#include "SingleUseWeapon.h"
 int MyMath::K = 0;
 
 struct Player
@@ -22,6 +23,9 @@ struct Player
 int main()
 {
     setlocale(LC_ALL, "Russian");
+    SingleUseWeapon scepter("Scepter", 14, 3, TWOHANDED, false);
     MagicWeapon band("Band", 7, 1, ONEHANDED, 2);
     band.MagicWeapon::attack(band);
+    scepter.attack(scepter);
+    scepter.attack(scepter);
 }
