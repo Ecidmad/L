@@ -8,4 +8,5 @@ private:
 public:
     MagicWeapon(string name, float damage, int weight, Direction group, float bonusDamage);
     MagicWeapon();
+    float getBonusDamage();
 };
