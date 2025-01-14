@@ -27,4 +27,18 @@ int main()
     {
         cout << msg << "\n";
     }
+    int year;
+    cout << "Введите год своего рождения: \n";
+    cin >> year;
+    try
+    {
+        if (year < 0) throw "Вы ввели число меньше нуля\n";
+        else if (year > 2025) throw "Вы еще не родились\n";
+        else if (year < 1850) throw "Что-то не верится...\n";
+        else cout << "Спасибо!\n";
+    }
+    catch(const char* msg)
+    {
+        cout << msg << "\n";
+    }
 }
