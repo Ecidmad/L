@@ -24,7 +24,7 @@ public:
     int sumweight(Weapon);
     int sumweight(int);
     string getName();
-    float getDamage();
+    virtual float getDamage();
     int getWeight();
     Direction getGroup();
     void setDamage(float damage);

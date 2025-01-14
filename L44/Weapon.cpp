@@ -42,12 +42,10 @@ string Weapon::getName()
 {
     return string(name);
 }
-
 float Weapon::getDamage()
 {
     return damage;
 }
-
 int Weapon::getWeight()
 {
     return weight;
