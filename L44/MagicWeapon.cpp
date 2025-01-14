@@ -4,6 +4,10 @@ MagicWeapon::MagicWeapon(string name, float damage, int weight, Direction group,
 	this->bonusDamage =bonusDamage;
 }
 MagicWeapon::MagicWeapon() : MagicWeapon("Scepter", 14, 3, TWOHANDED, 3) {}
+MagicWeapon::~MagicWeapon()
+{
+	cout << "Оружие исчезает без следа\n";
+}
 float MagicWeapon::getBonusDamage()
 {
 	return bonusDamage;
