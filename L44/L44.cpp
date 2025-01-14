@@ -24,8 +24,6 @@ int main()
     setlocale(LC_ALL, "Russian");
     Weapon spear("Spear", 10, 2, Direction::TWOHANDED);
     Weapon::printGroup(spear.getGroup());
-    Player player = {45323, "Jokagot", "Haropan"};
-    player.print(player);
     MagicWeapon scepter();
     MagicWeapon band("Band", 7, 1, ONEHANDED, 2);
     band.getBonusDamage();

@@ -11,4 +11,8 @@ public:
     ~MagicWeapon();
     float getBonusDamage();
     float getDamage() override;
+    friend bool operator<(MagicWeapon& w, Weapon& w2);
+    friend bool operator>(MagicWeapon& w, Weapon& w2);
+    friend bool operator<(MagicWeapon& w, MagicWeapon& w2);
+    friend bool operator>(MagicWeapon& w, MagicWeapon& w2);
 };

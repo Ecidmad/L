@@ -28,5 +28,4 @@ public:
     int getWeight();
     Direction getGroup();
     void setDamage(float damage);
-
 };

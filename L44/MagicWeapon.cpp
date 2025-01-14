@@ -16,3 +16,19 @@ float MagicWeapon::getDamage()
 {
 	return Weapon::getDamage()+bonusDamage;
 }
+bool operator<(MagicWeapon& w, Weapon& w2) 
+{
+	return w.getDamage() < w2.getDamage();
+}
+bool operator>(MagicWeapon& w, Weapon& w2) 
+{
+	return w.getDamage() > w2.getDamage();
+}
+bool operator<(MagicWeapon& w, MagicWeapon& w2)
+{
+	return w.getDamage() < w2.getDamage();
+}
+bool operator>(MagicWeapon& w, MagicWeapon& w2)
+{
+	return operator<(w, w2);
+}
