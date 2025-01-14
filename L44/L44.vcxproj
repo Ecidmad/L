@@ -131,12 +131,14 @@
     <ClCompile Include="L44.cpp" />
     <ClCompile Include="MagicWeapon.cpp" />
     <ClCompile Include="MyMath.cpp" />
+    <ClCompile Include="SingleUseWeapon.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Characteristic.h" />
     <ClInclude Include="MagicWeapon.h" />
     <ClInclude Include="MyMath.h" />
+    <ClInclude Include="SingleUseWeapon.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
