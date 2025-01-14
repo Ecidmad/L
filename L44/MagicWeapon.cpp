@@ -16,6 +16,10 @@ float MagicWeapon::getDamage()
 {
 	return Weapon::getDamage()+bonusDamage;
 }
+void MagicWeapon::attack(Weapon& m)
+{
+	cout << "Атакуем магическим оружием \n";
+}
 bool operator<(MagicWeapon& w, Weapon& w2) 
 {
 	return w.getDamage() < w2.getDamage();

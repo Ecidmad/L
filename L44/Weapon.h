@@ -28,4 +28,5 @@ public:
     int getWeight();
     Direction getGroup();
     void setDamage(float damage);
+    virtual void attack(Weapon& m) = 0;
 };

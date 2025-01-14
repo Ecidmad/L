@@ -22,11 +22,6 @@ struct Player
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    Weapon spear("Spear", 10, 2, Direction::TWOHANDED);
-    Weapon::printGroup(spear.getGroup());
-    MagicWeapon scepter();
     MagicWeapon band("Band", 7, 1, ONEHANDED, 2);
-    band.getBonusDamage();
-    cout << band.getDamage() << "\n";
-    cout << spear.getDamage() << "\n";
+    band.MagicWeapon::attack(band);
 }

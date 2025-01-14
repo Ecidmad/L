@@ -15,4 +15,5 @@ public:
     friend bool operator>(MagicWeapon& w, Weapon& w2);
     friend bool operator<(MagicWeapon& w, MagicWeapon& w2);
     friend bool operator>(MagicWeapon& w, MagicWeapon& w2);
+    void attack(Weapon& m) override;
 };

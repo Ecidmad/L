@@ -28,11 +28,6 @@ bool Weapon::maxweight(int x)
         return false;
     }
 }
-int Weapon::sumweight(Weapon y)
-{
-    std::cout << weight + y.weight << "\n";
-    return weight + y.weight;
-}
 int Weapon::sumweight(int x)
 {
     std::cout << weight + x << "\n";
