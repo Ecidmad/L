@@ -3,70 +3,66 @@
 #include <fstream>
 #include <cmath>
 #include <iomanip>
+#include <vector>
+#include <map>
 using namespace std;
-const double PI = 3.141592653589793;
-int main()
+void printVector(const vector<float>& vec)
 {
-    setlocale(LC_ALL, "");
-    //double radius;
-    //cout << "Введите радиус окружности: ";
-    //cin >> radius;
-    //double circumference = 2 * PI * radius;
-    //cout << "Длина окружности: " << round(circumference * 1000) / 1000 << endl;
-    string fileName = "output.txt";
-    string userInput;
-    while (true)
+    for (const auto& elem : vec)
     {
-        cout << "Введите строку (или команды read, erase, exit): ";
-        getline(cin, userInput);
-        if (userInput == "read")
+        cout << elem << " \n";
+    }
+}
+class Settings
+{
+public:
+    static void Add(const string& key, const string& value)
+    {
+        settingsMap[key] = value;
+    }
+
+    static string Get(const string& key)
+    {
+        if (settingsMap.find(key) != settingsMap.end())
         {
-            ifstream file(fileName);
-            if (file.is_open())
-            {
-                cout << "Содержимое файла:\n";
-                string line;
-                while (getline(file, line)) {
-                    cout << line << endl;
-                }
-                file.close();
-            }
-            else
-            {
-                cout << "Файл пуст или отсутствует." << endl;
-            }
+            return settingsMap[key];
         }
-        else if (userInput == "erase")
-        {
-            ofstream file(fileName, ios::trunc);
-            if (file.is_open())
-            {
-                cout << "Файл очищен." << endl;
-                file.close();
-            }
-            else
-            {
-                cerr << "Ошибка при очистке файла." << endl;
-            }
-        }
-        else if (userInput == "exit")
-        {
-            cout << "Завершение программы." << endl;
-            break;
-        }
-        else
-        {
-            ofstream file(fileName, ios::app);
-            if (file.is_open())
-            {
-                file << userInput << endl;
-                file.close();
-                cout << "Строка добавлена в файл." << endl;
-            }
-            else
-            {
-                cerr << "Ошибка при записи в файл." << endl;
-            }
+        return "Key not found";
+    }
+
+    static void Print() {
+        for (const auto& pair : settingsMap) {
+            cout << pair.first << ": " << pair.second << endl;
         }
     }
+private:
+    static map<string, string> settingsMap;
+};
+map<string, string> Settings::settingsMap;
+int main()
+{
+    //vector<float> vec;
+    //vec.push_back(1.1f);
+    //vec.push_back(2.2f);
+    //vec.push_back(3.3f);
+    //vec.push_back(4.4f);
+    //vec.push_back(5.5f);
+    //vector<float>::iterator i = vec.begin();
+    //i = i + 3;
+    //cout << "Initial vector: ";
+    //printVector(vec);
+    //vec.insert(i, 6.6f);
+    //cout << "Vector after insertion: ";
+    //printVector(vec);
+    //i = vec.end();
+    //vec.erase(i);
+    //cout << "Vector after removing last element: ";
+    //printVector(vec);
+    Settings::Add("Language", "C++");
+    Settings::Add("Version", "1.0");
+    Settings::Add("Platform", "Linux");
+    cout << "Settings map:" << endl;
+    cout << "Get Language: " << Settings::Get("Language") << endl;
+    cout << "Get UnknownKey: " << Settings::Get("UnknownKey") << endl;
+    Settings::Print();
 }
